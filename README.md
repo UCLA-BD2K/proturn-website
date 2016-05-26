@@ -1,2 +1,2 @@
 # proturn-website
-ProTurn site currently on http://www.heartproteome.org/proturn/
+ProTurn site currently on proturn.heartproteome.org
