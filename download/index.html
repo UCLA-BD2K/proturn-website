@@ -1,0 +1,100 @@
+<center><strong>ProTurn Software</strong></center></br>
+
+<center>Software License</center>
+<center>UCLA</center></br>
+<p>This License governs use of the accompanying ProTurn SOFTWARE UCLA Case No. 2013-137 and all accompanying utilities, forms, libraries, etc. ("Software"), and Licensee's ("You" or "Your") use of the Software, Platform, and all Utilities. Use of the Software constitutes acceptance of this license.</p>
+<p>The Software was created by UCLA's ProTurn Investigator Team ("Licensor") to enable UCLA Faculty, Departments and affiliated Researchers to use and modify the SOFTWARE ("Software"). The Regents of the University of California ("The Regents") are making it available in order to improve the Software.</p>
+<p>You may use this Software for any NON-COMMERCIAL, purpose internally in your organization, subject to the restrictions in this license. Some of those allowable uses or purposes which can be non-commercial are teaching, academic research, use in your own environment (whether that is a research, academic or non-profit company or organization) and personal experimentation. This license does not allow use by commercial entities, but if you would like to use it for commercial purpose we are happy to arrange a license for you, please contact the UCLA Intellectual Property Office @ innovation@research.ucla.edu."</p> 
+<p>There are two things you cannot do with this Software: The first is you cannot incorporate it into a commercial product ("Commercial Use"), the second is you cannot distribute this Software or any modifications ("Derivative Work") of this Software and beyond that, you must share your changes to the Software. We want everyone to benefit from the use of this product, and we want to avoid it forking (or splintering) into disconnected versions. Therefore; you may not use or distribute this Software or any Derivative Works in any form for any purpose. Examples of prohibited purposes would be licensing, leasing, or selling the Software, or distributing the Software for use with other commercial products, or incorporating the Software into a commercial product.</p>
+<p>You may create Derivative Works <strong>for your own use only</strong>. You may modify this Software and contribute it back to UCLA, but you may not distribute the modified Software to any other organization or entity or person; all distribution must happen via UCLA's CREATOR. You have not been granted a right to sublicense this Software, so you may not grant any rights to the Software or Derivative Works under this License. For example, you may not distribute modifications of the Software under any terms, or sublicense this Software to others.</p>
+
+You agree: 
+<ol>
+<li>To share all Derivative Works you create with the Licensor at CREATOR so that others who are using the Software can benefit from improvements.</li>
+<li>That you will include the following statement ("Software created by the ProTurn Investigator Team at UCLA. &copy; 2014 The Regents of the University of California.") somewhere on your application or website. There must be an active hyperlink to this web address: "http://www.heartproteome.org/copa/proturn/"</li>
+<li>Not remove any copyright or other notices from the Software.</li>
+<li>That you will <strong>not distribute</strong> this Software or any Derivative Works to any party whatsoever, whether modified or unmodified. UCLA shall be the only distributor of this Software, with no exceptions.</li>
+<li>THAT THIS PRODUCT IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS PRODUCT, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. YOU MUST PASS THIS LIMITATION OF LIABILITY ON WHENEVER YOU DISTRIBUTE THE SOFTWARE OR DERIVATIVE WORKS.</li>
+<li>That if you sue anyone over patents that you think may apply to the Software or anyone's use of the Software, your license to the Software ends automatically.</li>
+<li>That your rights under the License end automatically if you breach it in any way.</li>
+<li>UCLA and the Regents of the University of California reserves all rights not expressly granted to you in this license.</li>
+<li>Nothing in this Agreement grants by implication, estoppel, or otherwise any rights to any intellectual property owned by the Regents of the University of California, except as explicitly set forth in this license.</li>
+<li>You will hold the Regents harmless for all claims, suits, losses, liabilities, damages, costs, fees, and expenses resulting from their respective activities arising from this license.</li>
+<li>You will not use any name, trade name, trademark, name of any campus, or other designation of the Regents of the University of California in advertising, publicity, or other promotional activity, except as permitted herein.</li>
+<!--<li>In partial consideration for the License, You must pay to The Regents a license issue fee of <strong>FIVE HUNDRED DOLLARS ($500.00)</strong> within thirty (30) days of the Effective Date. Payment can be made online, via credit card and once we have received payment, we will issue you a license for the Software.</li>-->
+</ol>
+
+<center><input type="checkbox" id="accepted" onclick="toggle();">&nbsp;&nbsp;I ACCEPT the TERMS of this license.</center>
+
+<script>
+function toggle()
+{
+	var accepted = document.getElementById('accepted').checked;
+	document.getElementById('signature').disabled = !accepted;
+	document.getElementById('date').disabled = !accepted;
+	document.getElementById('submit').disabled = !accepted;
+}
+function validate()
+{
+	var licensee = document.getElementById('licensee').value;
+	var name = document.getElementById('name').value;
+	var email = document.getElementById('email').value;
+	var signature = document.getElementById('signature').value;
+	var date = document.getElementById('date').value;
+	var alertString = "The following required fields are missing:";
+	if(licensee == null || licensee == '')
+		alertString += " licensee";
+	if(name == null || name == '')
+		alertString += " name";
+	if(email == null || email == '')
+		alertString += " email";
+	if(signature == null || signature == '')
+		alertString += " signature";
+	if(date == null || date == '')
+		alertString += " date";
+	if(alertString != "The following required fields are missing:")
+	{
+		alert(alertString);
+		return false;
+	}	
+}
+</script>
+
+</br></br>
+
+<center><strong>Licensee Information</strong></center></br>
+<center>(this page must be completed with all Licensee information)</center></br>
+
+<!--<p>Please indicate your ACCEPTANCE of TERMS of this agreement by checking here: <input type="checkbox" name="acceptance" value="accepted"></p>-->
+
+<form action="license_submit.php" method="post" onsubmit="return validate();">
+	<strong>LICENSEE:</strong></br>
+	<input type="text" name="licensee"><br>
+	<p>(You MUST enter your legal name above, either as an institution/company or as an individual, and complete the fields below - this is the address we will use for all notices and billing and it must be fully completed.)</p>
+
+	<p>If you are licensing this for an Institution, then please fill in your Institution's full name along with your complete address and have the authorized signatory type their name as a signature. If you are licensing this as an individual, then please clearly print your name and complete address and type your name for signature. Thank you.</p>
+
+	Name:</br>
+	<input type="text" name="name"><br>
+	Title:</br>
+	<input type="text" name="title"><br>
+	Address 1:</br>
+	<input type="text" name="address1"><br>
+	Address 2:</br>
+	<input type="text" name="address2"><br>
+	City, State, Zip:</br>
+	<input type="text" name="address3"><br>
+	Email:</br>
+	<input type="email" name="email"><br>
+	Telephone:</br>
+	<input type="text" name="telephone"></br>
+	</br>
+	Signature:</br>
+	<input type="text" id="signature" name="signature" disabled="disabled"><br>
+	Date:</br>
+	<input type="date" id="date" name="date" disabled="disabled"><br>
+	</br>
+	<input type="submit" id="submit" value="Submit" disabled="disabled">
+</form>
+
+<p>Your license is effective as of the date you enter on this agreement.</p>
